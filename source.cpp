@@ -23,7 +23,12 @@ int main() {
         getline(ss, s.lastName);
         students.push_back(s);
     }
-
+#ifdef _DEBUG
+    for (const auto& s : students) {
+        cout << s.firstName << " " << s.lastName << endl;
+    }
+#endif
     cin.get();
-    return 0;
+
+    return 1;
 }
